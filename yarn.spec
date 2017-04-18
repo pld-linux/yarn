@@ -33,8 +33,10 @@ package before its code is executed.
 %setup -qc
 mv dist/* .
 
-%{__rm} bin/node-gyp-bin/node-gyp.cmd
-%{__rm} bin/yarn.cmd
+%{__rm} bin/node-gyp-bin/*.cmd
+%{__rm} bin/*.cmd
+%{__rm} bin/yarn
+%{__rm} bin/yarnpkg
 
 %install
 rm -rf $RPM_BUILD_ROOT
