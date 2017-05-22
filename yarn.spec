@@ -1,11 +1,11 @@
-Summary:	Fast, reliable, and secure node dependency management"
+Summary:	Fast, reliable, and secure node dependency management
 Name:		yarn
-Version:	0.23.2
+Version:	0.24.5
 Release:	1
 License:	BSD
 Group:		Development/Tools
 Source0:	https://github.com/yarnpkg/yarn/releases/download/v%{version}/%{name}-v%{version}.tar.gz
-# Source0-md5:	8c40f98256c9f14234e6afb04af910b0
+# Source0-md5:	c2484941f0ff0dd20079d2b1f5229845
 URL:		https://yarnpkg.com/
 BuildRequires:	rpmbuild(macros) >= 1.634
 BuildRequires:	sed >= 4.0
@@ -33,7 +33,6 @@ package before its code is executed.
 %setup -qc
 mv dist/* .
 
-%{__rm} bin/node-gyp-bin/*.cmd
 %{__rm} bin/*.cmd
 %{__rm} bin/yarn
 %{__rm} bin/yarnpkg
@@ -42,7 +41,7 @@ mv dist/* .
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{nodejs_libdir}/%{name},%{_bindir}}
 
-cp -a lib lib-legacy bin node_modules package.json $RPM_BUILD_ROOT%{nodejs_libdir}/%{name}
+cp -a lib bin package.json $RPM_BUILD_ROOT%{nodejs_libdir}/%{name}
 ln -s %{nodejs_libdir}/%{name}/bin/%{name}.js $RPM_BUILD_ROOT%{_bindir}/%{name}
 ln -s %{name} $RPM_BUILD_ROOT%{_bindir}/yarnpkg
 
@@ -51,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.md LICENSE
+%doc LICENSE
 %attr(755,root,root) %{_bindir}/yarn
 %attr(755,root,root) %{_bindir}/yarnpkg
 %defattr(-,root,root,-)
