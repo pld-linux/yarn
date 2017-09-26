@@ -1,11 +1,11 @@
 Summary:	Fast, reliable, and secure node dependency management
 Name:		yarn
-Version:	0.27.5
-Release:	1
+Version:	1.1.0
+Release:	0.1
 License:	BSD
 Group:		Development/Tools
 Source0:	https://github.com/yarnpkg/yarn/releases/download/v%{version}/%{name}-v%{version}.tar.gz
-# Source0-md5:	7300299755265c169a8f05a1c7dfd4db
+# Source0-md5:	26588f716ac62a54a98094ee6c1284e4
 URL:		https://yarnpkg.com/
 BuildRequires:	rpmbuild(macros) >= 1.634
 BuildRequires:	sed >= 4.0
@@ -30,8 +30,7 @@ Secure: Yarn uses checksums to verify the integrity of every installed
 package before its code is executed.
 
 %prep
-%setup -qc
-mv dist/* .
+%setup -q -n %{name}-v%{version}
 
 %{__rm} bin/*.cmd
 %{__rm} bin/yarn
