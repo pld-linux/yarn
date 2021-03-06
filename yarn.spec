@@ -1,15 +1,15 @@
 Summary:	Fast, reliable, and secure node dependency management
 Name:		yarn
-Version:	1.22.4
+Version:	1.22.5
 Release:	1
 License:	BSD
 Group:		Development/Tools
 Source0:	https://github.com/yarnpkg/yarn/releases/download/v%{version}/%{name}-v%{version}.tar.gz
-# Source0-md5:	faf483d50aa8ccbdc802efa0cac5d4d3
-URL:		https://yarnpkg.com/
+# Source0-md5:	a4d5802cc7eec88edf47bd8887acb06c
+URL:		https://classic.yarnpkg.com/lang/en/
 BuildRequires:	rpmbuild(macros) >= 1.634
 BuildRequires:	sed >= 4.0
-Requires:	nodejs >= 4.0
+Requires:	nodejs >= 4.8.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
