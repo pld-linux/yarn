@@ -1,7 +1,7 @@
 Summary:	Fast, reliable, and secure node dependency management
 Name:		yarn
 Version:	1.22.10
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Tools
 Source0:	https://github.com/yarnpkg/yarn/releases/download/v%{version}/%{name}-v%{version}.tar.gz
