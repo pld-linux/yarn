@@ -1,4 +1,5 @@
 Summary:	Fast, reliable, and secure node dependency management
+Summary(pl.UTF-8):	Szybkie, wiarygodne i bezpieczne zarządzanie zależnościami node
 Name:		yarn
 Version:	1.22.10
 Release:	2
@@ -14,8 +15,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Fast, reliable, and secure dependency management. Yarn: Fast,
-reliable, and secure dependency management.
+Yarn: Fast, reliable, and secure dependency management.
 
 Fast: Yarn caches every package it downloads so it never needs to
 again. It also parallelizes operations to maximize resource
@@ -28,6 +28,23 @@ any other system.
 
 Secure: Yarn uses checksums to verify the integrity of every installed
 package before its code is executed.
+
+%description -l pl.UTF-8
+Yarm to szybkie, wiarygodne i bezpieczne zarządzanie zależnościami
+node.
+
+Szybkie: Yarn przechowuje każdy pobierany pakiet w pamięci podręcznej,
+przez co nigdy nie potrzebuje go pobierać ponownie. Zrównolegla
+operacje, aby zmaksymalizować wykorzystanie zasobów, dzięki czemu
+czasy instalacji są krótsze.
+
+Wiarygodny: dzięki szczegółowemu, ale zwięzłemu formatowi plików
+blokujących i deterministycznemu algorytmowi instalacji, Yarn potrafi
+zagwarantować, że instalacja działająca na jednym systemie będzie
+działała dokładnie tak samo na innym.
+
+Bezpieczny: Yarn używa sum kontrolnych do kontroli integralności
+każdego zainstalowanego pakietu przed wykonaniem jego kodu.
 
 %prep
 %setup -q -n %{name}-v%{version}
