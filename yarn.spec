@@ -70,5 +70,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE
 %attr(755,root,root) %{_bindir}/yarn
 %attr(755,root,root) %{_bindir}/yarnpkg
-%defattr(-,root,root,-)
-%{nodejs_libdir}/%{name}
+%dir %{nodejs_libdir}/%{name}
+%dir %{nodejs_libdir}/%{name}/bin
+%dir %{nodejs_libdir}/%{name}/lib
+%attr(755,root,root) %{nodejs_libdir}/%{name}/bin/yarn.js
+%attr(755,root,root) %{nodejs_libdir}/%{name}/lib/cli.js
+%{nodejs_libdir}/%{name}/lib/v8-compile-cache.js
+%{nodejs_libdir}/%{name}/package.json
