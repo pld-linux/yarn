@@ -5,6 +5,7 @@ Version:	1.22.10
 Release:	2
 License:	BSD
 Group:		Development/Tools
+#Source0Download: https://github.com/yarnpkg/yarn/releases
 Source0:	https://github.com/yarnpkg/yarn/releases/download/v%{version}/%{name}-v%{version}.tar.gz
 # Source0-md5:	52e8dbe9d0cb90683dd3ee2ebf2becb8
 URL:		https://classic.yarnpkg.com/lang/en/
